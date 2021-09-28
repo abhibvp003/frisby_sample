@@ -7,7 +7,7 @@ const Joi = frisby.Joi;
 
 describe('Alarm profile retrive all farm alarm profiles', () => {
     beforeAll(async () => {
-      const idToken = await getSession('matknu@kth.se','#Tacos123')        //'testuser0916_01@mailinator.com','H3577ma119!')
+      const idToken = await getSession('324324234@mailinator.com','erwrwrw123')
   
       frisby.globalSetup({
         request: {

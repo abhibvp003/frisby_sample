@@ -6,7 +6,7 @@ import { ALARM_ROOT_URL, frisbyGet } from '../util/test-util'
 
 describe('Alarm Schedule', () => {
     beforeAll(async () => {
-      const idToken = await getSession('matknu@kth.se','#Tacos123')          
+      const idToken = await getSession('324324234@mailinator.com','erwrwrw123')        
       frisby.globalSetup({
         request: {
           headers: {
