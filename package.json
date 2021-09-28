@@ -1,0 +1,50 @@
+{
+  "name": "Automated_Testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write '**/*.{ts,js,json}'",
+    "test": "node check-env-variables.js && jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/frisby": "^2.0.7",
+    "@types/jest": "^26.0.3",
+    "@types/uuid": "^8.0.0",
+    "aws-sdk": "^2.741.0",
+    "frisby": "^2.1.3",
+    "husky": "^4.2.5",
+    "jest": "^26.6.3",
+    "jest-html-reporter": "^3.4.1",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.1.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.10",
+    "uuid": "^8.2.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Execution Report",
+          "outputPath": "./report/test-report.html",
+          "dateFormat": "dd/mm/yyyy HH:MM:SS"
+        }
+      ]
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,json}": "prettier --write"
+  }
+}
